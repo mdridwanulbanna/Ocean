@@ -102,7 +102,7 @@ separately and are not produced by this code.
 
 ## Citation
 
-Please cite the paper when it is published. Citation details for the code are in `CITATION.cff`.
+
 
 ## License
 
