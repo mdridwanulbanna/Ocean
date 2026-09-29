@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite it as below."
+title: "Station-specific RNN-LSTM models for forecasting sea surface temperature along the Bangladesh coast"
+version: 1.0.0
+license: MIT
+repository-code: "https://github.com/mdridwanulbanna/Ocean"
+authors:
+  - family-names: Rifat
+    given-names: Md. Ridwanul Banna
+    affiliation: "Department of Oceanography, University of Chittagong, Bangladesh"
+  - family-names: Uddin
+    given-names: Mohammad Muslem
+    affiliation: "Department of Oceanography, University of Chittagong, Bangladesh"
+  - family-names: Farzin
+    given-names: Nishat Anjum
+    affiliation: "Department of Oceanography, University of Chittagong, Bangladesh"
