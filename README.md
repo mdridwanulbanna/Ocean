@@ -138,7 +138,7 @@ the map latitude. The Natural Earth files are downloaded on first use.
 
 ## Citation
 
-Please cite the relevant paper when it is published. Citation details for the code are in `CITATION.cff`.
+Citation details for the code are in `CITATION.cff`.
 
 ## License
 
