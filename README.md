@@ -11,9 +11,9 @@ temperature (SST) at seven coastal and island stations in the northern Bay of Be
 
 **Paper 2** (reproduced by `m2_analysis.py`, using the forecasts written by `run_pipeline.py`)
 
-> Rifat, M.R.B., Uddin, M.M., Farzin, N.A., Hasnat, M.J. *Seasonal cycle, recent trends and LSTM-based
-> extrapolation of coastal sea surface temperature at seven stations along the Bangladesh coast, northern
-> Bay of Bengal.* (under review)
+> Rifat, M.R.B., Uddin, M.M., Farzin, N.A., Hasnat, M.J. *Seasonal variability, historical trends and
+> LSTM-based extrapolation of coastal sea surface temperature along the Bangladesh coast, northern Bay of
+> Bengal.* (under review)
 
 The study-area map used as Fig. 1 in both papers is produced by `make_study_area_map.py`.
 
@@ -100,23 +100,26 @@ in `run_info.txt`. The workflow and LSTM cell diagrams (Figs. 2–3) were drawn 
 ## Paper 2: what the analysis does
 
 `m2_analysis.py` reads the observed series in `data/` and the forecasts written by `run_pipeline.py`. It
-describes the mean seasonal cycle and the interannual variability of each calendar month, estimates the
-2000–2024 trends from annual means (OLS, Theil–Sen, Mann–Kendall), and summarises the 2025 forecast and
-the 2025–2034 extrapolation. A straight line fitted to raw monthly values is biased by the seasonal
-cycle, so that slope is reported only to document the bias.
+describes the observed seasonal cycle and the interannual variability of each calendar month, and
+estimates the 2000–2024 trends from annual means: OLS with Newey–West standard errors and the Theil–Sen
+slope with the Hamed–Rao modified Mann–Kendall test (the original, trend-free pre-whitened and Yue–Wang
+variants are written as a sensitivity check). The regional mean is the unweighted mean of the seven
+stations. The 2025–2034 extrapolation is deterministic model output, so its trends are reported without
+significance tests; a straight line through raw monthly values is compared with repeated seasonal
+cycles to quantify the spurious trend induced by the seasonal phase structure. Optionally, with
+`--verify-dir` pointing to station files for 2025 in the same format as `data/`, the 2025 forecast is
+verified against observations. This option is not used in the paper, because the SST product covered
+the period up to December 2024 at the time of analysis.
 
 | Paper 2 | File in `results_m2/` |
 |---|---|
 | Table 2 (seasonal cycle) | `tables/table2_seasonal_cycle.csv` |
-| Table 3 (observed trends, 2000–2024) | `tables/table3_observed_trends.csv` |
+| Table 3 (observed trends and sensitivity tests) | `tables/table3_observed_trends.csv` |
 | Table 4 (forecast for 2025) | `tables/table4_forecast_2025.csv` |
-| Table 5 (extrapolation, 2025–2034) | `tables/table5_extrapolation.csv` |
-| Fig. 2 (mean seasonal cycle) | `figures/Fig2_seasonal_cycle.png` |
-| Fig. 3 (interannual variability by month) | `figures/Fig3_monthly_variability.png` |
-| Fig. 4 (annual means, observed and extrapolated) | `figures/Fig4_annual_means.png` |
-| Fig. 5 (2025 forecast) | `figures/Fig5_forecast_2025.png` |
-| Fig. 6 (seasonal cycle and 2025 forecast) | `figures/Fig6_cycle_vs_2025.png` |
-| Fig. 7 (regional annual means) | `figures/Fig7_regional_annual_means.png` |
+| Table 5 (stability of the extrapolation) | `tables/table5_extrapolation_stability.csv` |
+| Table 6 (trend estimates) | `tables/table6_trend_comparison.csv` |
+| Figs. 2–7 | `figures/Fig2_seasonal_cycle.png` … `figures/Fig7_regional_annual_means.png` |
+| 2025 verification (optional, `--verify-dir`; not in the paper) | `tables/table_verification_2025.csv`, `figures/Fig_verification_2025.png` |
 
 ## Study-area map (Fig. 1 of both papers)
 
@@ -135,7 +138,7 @@ the map latitude. The Natural Earth files are downloaded on first use.
 
 ## Citation
 
-Citation details for the code are in `CITATION.cff`.
+Please cite the relevant paper when it is published. Citation details for the code are in `CITATION.cff`.
 
 ## License
 

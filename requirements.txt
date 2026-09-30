@@ -5,3 +5,4 @@ scipy
 scikit-learn
 statsmodels
 matplotlib
+pymannkendall>=1.4
