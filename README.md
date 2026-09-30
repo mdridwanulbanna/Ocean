@@ -88,8 +88,8 @@ A full run takes roughly half an hour or more on a CPU and is considerably faste
 Also written: `figures/figS1_variability_vs_accuracy.png`, `figures/figS2_rmse_by_method.png`,
 single-station versions of Figs. 4 and 5 in `per_station/`, the 2025–2034 continuation in `forecasts/`,
 a SARIMA convergence check in `tables/sarima_convergence.csv`, and the software versions of the run
-in `run_info.txt`. The study-area map, workflow diagram and LSTM cell diagram (Figs. 1–3) were drawn
-separately and are not produced by this code.
+in `run_info.txt`. The workflow and LSTM cell diagrams (Figs. 2–3) were drawn separately; the map (Fig. 1) is produced by
+`make_study_area_map.py`.
 
 ## Reproducibility notes
 
@@ -100,9 +100,33 @@ separately and are not produced by this code.
   every SARIMA fit is written to `tables/sarima_convergence.csv`.
 - The 2025–2034 series is a recursive statistical continuation of each model, not a climate projection.
 
+## Companion analysis: seasonal cycle, trends and extrapolation
+
+`m2_analysis.py` reproduces the second paper (seasonal cycle, interannual variability, 2000–2024 trends,
+the 2025 forecast and the 2025–2034 extrapolation). It reads the observed series in `data/` and the
+forecasts written by `run_pipeline.py`:
+
+```bash
+python run_pipeline.py --data-dir data --out-dir results
+python m2_analysis.py --data-dir data --forecast-dir results/forecasts --out-dir results_m2
+```
+
+Trends are estimated from annual means (OLS, Theil–Sen, Mann–Kendall). A straight line through raw monthly
+values is biased by the seasonal cycle, so that slope is reported only to document the bias.
+
+## Study-area map (Fig. 1)
+
+`make_study_area_map.py` draws the station map on Natural Earth 1:10m coastlines, rivers and borders
+(public domain), limited to the study area (20.0–22.5°N, 89.0–92.5°E), with a scale bar computed
+for the map latitude. The Natural Earth files are downloaded on first use.
+
+```bash
+python make_study_area_map.py --data-dir mapdata --out Fig1_study_area.png --dpi 600
+```
+
 ## Citation
 
-
+Please cite the paper when it is published. Citation details for the code are in `CITATION.cff`.
 
 ## License
 
