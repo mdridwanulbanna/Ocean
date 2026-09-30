@@ -126,7 +126,7 @@ python make_study_area_map.py --data-dir mapdata --out Fig1_study_area.png --dpi
 
 ## Citation
 
-Please cite the paper when it is published. Citation details for the code are in `CITATION.cff`.
+Citation details for the code are in `CITATION.cff`.
 
 ## License
 
