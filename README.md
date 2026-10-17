@@ -11,7 +11,7 @@ temperature (SST) at seven coastal and island stations in the northern Bay of Be
 
 **Paper 2** (reproduced by `m2_analysis.py`, using the forecasts written by `run_pipeline.py`)
 
-> Rifat, M.R.B., Uddin, M.M., Farzin, N.A., Hasnat, M.J. *Seasonal variability, historical trends and
+> Rifat, M.R.B., Uddin, M.M., Farzin, N.A. *Seasonal variability, historical trends and
 > LSTM-based extrapolation of coastal sea surface temperature along the Bangladesh coast, northern Bay of
 > Bengal.* (under review)
 
@@ -138,7 +138,7 @@ the map latitude. The Natural Earth files are downloaded on first use.
 
 ## Citation
 
-Citation details for the code are in `CITATION.cff`.
+Please cite the relevant paper when it is published. Citation details for the code are in `CITATION.cff`.
 
 ## License
 
