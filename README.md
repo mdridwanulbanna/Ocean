@@ -6,7 +6,7 @@ temperature (SST) at seven coastal and island stations in the northern Bay of Be
 
 **Paper 1** (reproduced by `run_pipeline.py`)
 
-> Rifat, M.R.B., Uddin, M.M., Farzin, N.A. *Station-specific RNN-LSTM models for forecasting sea surface
+> Rifat, M.R.B., Uddin, M.M., Farzin, N.A. *Station-specific long short-term memory models for forecasting sea surface
 > temperature along the Bangladesh coast: development, validation, and cross-station performance.* (under review)
 
 **Paper 2** (reproduced by `m2_analysis.py`, using the forecasts written by `run_pipeline.py`)
