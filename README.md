@@ -46,7 +46,8 @@ pip install -r requirements.txt
 ## Data
 
 The input is one CSV file per station with the daily SST series. The source product, file format and
-grid-cell coordinates are described in [data/README.md](data/README.md).
+grid-cell coordinates are described in [data/README.md](data/README.md). This study has been conducted using 
+E.U. Copernicus Marine Service Information; https://doi.org/10.48670/moi-00169.
 
 ## Running
 
@@ -143,7 +144,6 @@ Citation details for the code are in `CITATION.cff`.
 
 MIT (see `LICENSE`).
 
-## Data acknowledgement
+## Archive
 
-This study has been conducted using E.U. Copernicus Marine Service Information;
-https://doi.org/10.48670/moi-00169.
+[![DOI](https://zenodo.org/badge/999344235.svg)](https://doi.org/10.5281/zenodo.23036603).
