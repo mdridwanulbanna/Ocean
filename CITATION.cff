@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "If you use this code, please cite it as below."
+message: "If you use this code or these results, please cite the archived version below and the related paper once published."
 title: "Station-specific RNN-LSTM models for forecasting sea surface temperature along the Bangladesh coast"
 version: 1.2.0
 license: MIT
