@@ -146,4 +146,4 @@ MIT (see `LICENSE`).
 
 ## Archive
 
-[![DOI](https://zenodo.org/badge/999344235.svg)](https://doi.org/10.5281/zenodo.23036603).
+[![DOI](https://zenodo.org/badge/999344235.svg)](https://doi.org/10.5281/zenodo.23036603)
