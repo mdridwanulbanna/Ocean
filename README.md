@@ -63,12 +63,6 @@ A quick check that everything works (not the published results):
 python run_pipeline.py --data-dir data --out-dir test_run --epochs 2
 ```
 
-**Google Colab:** upload the repository and the CSV files, select a GPU runtime, then run
-`!pip install -r requirements.txt` followed by the commands above (each prefixed with `!`).
-If a GPU run stops with a TensorFlow determinism error, add `--no-determinism` to `run_pipeline.py`.
-A full run of `run_pipeline.py` takes roughly half an hour or more on a CPU and is considerably
-faster on a GPU.
-
 ## Paper 1: what the pipeline does
 
 1. Averages the daily station series to 300 monthly values per station.
@@ -138,6 +132,7 @@ the map latitude. The Natural Earth files are downloaded on first use.
 
 ## Citation
 
+If you use this code or these results, please cite the archived version below and the related paper once published.
 Citation details for the code are in `CITATION.cff`.
 
 ## License
